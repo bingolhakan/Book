@@ -9,7 +9,7 @@ namespace Book.DAL.Abstract
 {
     public interface IPublisher
     {
-        List<IPublisher> GetAll();
+        List<Publisher> GetAll();
         Publisher GetById(int id);
         void Add(Publisher publisher);
         void Update(Publisher publisher);
