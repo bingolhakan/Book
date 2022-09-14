@@ -32,5 +32,28 @@ namespace Book.WinFormUI
             }
             
         }
+
+        private void FCategories_Load(object sender, EventArgs e)
+        {
+            //Visible: Görünür mü? Enabled:Etkinleştirilmiş mi?
+            buttonCatUpdate.Enabled=false;
+            buttonCatDelete.Enabled = false;
+        }
+
+        private void dataGridViewCat_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //textBoxCatID.Text = dataGridViewCat.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridViewCat.Rows[e.RowIndex];
+                int _id = Int32.Parse(row.Cells[0].Value.ToString());
+                Category category = CategoryManager.GetById(_id);
+                
+                buttonCatUpdate.Enabled = true;
+                buttonCatDelete.Enabled = true;
+            }
+
+        }
     }
 }

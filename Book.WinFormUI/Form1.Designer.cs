@@ -30,16 +30,16 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBoxPublisher = new System.Windows.Forms.ComboBox();
+            this.comboBoxPublishers = new System.Windows.Forms.ComboBox();
             this.comboBoxCategories = new System.Windows.Forms.ComboBox();
-            this.comboBoxAuthor = new System.Windows.Forms.ComboBox();
+            this.comboBoxAuthors = new System.Windows.Forms.ComboBox();
             this.labelPublisher = new System.Windows.Forms.Label();
             this.labelCategories = new System.Windows.Forms.Label();
             this.labelAuthor = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxISBN = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.labelBookName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxName = new System.Windows.Forms.TextBox();
             this.buttonCategories = new System.Windows.Forms.Button();
             this.buttonAuthors = new System.Windows.Forms.Button();
             this.buttonPublisher = new System.Windows.Forms.Button();
@@ -62,16 +62,16 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBoxPublisher);
+            this.groupBox1.Controls.Add(this.comboBoxPublishers);
             this.groupBox1.Controls.Add(this.comboBoxCategories);
-            this.groupBox1.Controls.Add(this.comboBoxAuthor);
+            this.groupBox1.Controls.Add(this.comboBoxAuthors);
             this.groupBox1.Controls.Add(this.labelPublisher);
             this.groupBox1.Controls.Add(this.labelCategories);
             this.groupBox1.Controls.Add(this.labelAuthor);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.textBoxISBN);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.labelBookName);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.textBoxName);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(15, 45);
             this.groupBox1.Name = "groupBox1";
@@ -79,15 +79,16 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Books";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // comboBoxPublisher
+            // comboBoxPublishers
             // 
-            this.comboBoxPublisher.FormattingEnabled = true;
-            this.comboBoxPublisher.Location = new System.Drawing.Point(475, 119);
-            this.comboBoxPublisher.Name = "comboBoxPublisher";
-            this.comboBoxPublisher.Size = new System.Drawing.Size(255, 36);
-            this.comboBoxPublisher.TabIndex = 11;
-            this.comboBoxPublisher.SelectedIndexChanged += new System.EventHandler(this.comboBoxPublisher_SelectedIndexChanged);
+            this.comboBoxPublishers.FormattingEnabled = true;
+            this.comboBoxPublishers.Location = new System.Drawing.Point(475, 119);
+            this.comboBoxPublishers.Name = "comboBoxPublishers";
+            this.comboBoxPublishers.Size = new System.Drawing.Size(255, 36);
+            this.comboBoxPublishers.TabIndex = 11;
+            this.comboBoxPublishers.SelectedIndexChanged += new System.EventHandler(this.comboBoxPublisher_SelectedIndexChanged);
             // 
             // comboBoxCategories
             // 
@@ -97,13 +98,13 @@
             this.comboBoxCategories.Size = new System.Drawing.Size(255, 36);
             this.comboBoxCategories.TabIndex = 10;
             // 
-            // comboBoxAuthor
+            // comboBoxAuthors
             // 
-            this.comboBoxAuthor.FormattingEnabled = true;
-            this.comboBoxAuthor.Location = new System.Drawing.Point(475, 31);
-            this.comboBoxAuthor.Name = "comboBoxAuthor";
-            this.comboBoxAuthor.Size = new System.Drawing.Size(255, 36);
-            this.comboBoxAuthor.TabIndex = 9;
+            this.comboBoxAuthors.FormattingEnabled = true;
+            this.comboBoxAuthors.Location = new System.Drawing.Point(475, 31);
+            this.comboBoxAuthors.Name = "comboBoxAuthors";
+            this.comboBoxAuthors.Size = new System.Drawing.Size(255, 36);
+            this.comboBoxAuthors.TabIndex = 9;
             // 
             // labelPublisher
             // 
@@ -132,12 +133,12 @@
             this.labelAuthor.TabIndex = 4;
             this.labelAuthor.Text = "Author";
             // 
-            // textBox2
+            // textBoxISBN
             // 
-            this.textBox2.Location = new System.Drawing.Point(138, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(125, 34);
-            this.textBox2.TabIndex = 3;
+            this.textBoxISBN.Location = new System.Drawing.Point(138, 73);
+            this.textBoxISBN.Name = "textBoxISBN";
+            this.textBoxISBN.Size = new System.Drawing.Size(125, 34);
+            this.textBoxISBN.TabIndex = 3;
             // 
             // label1
             // 
@@ -157,12 +158,12 @@
             this.labelBookName.TabIndex = 1;
             this.labelBookName.Text = "Name";
             // 
-            // textBox1
+            // textBoxName
             // 
-            this.textBox1.Location = new System.Drawing.Point(138, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 34);
-            this.textBox1.TabIndex = 0;
+            this.textBoxName.Location = new System.Drawing.Point(138, 33);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(185, 34);
+            this.textBoxName.TabIndex = 0;
             // 
             // buttonCategories
             // 
@@ -258,18 +259,18 @@
         private Label labelPublisher;
         private Label labelCategories;
         private Label labelAuthor;
-        private TextBox textBox2;
+        private TextBox textBoxISBN;
         private Label label1;
         private Label labelBookName;
-        private TextBox textBox1;
+        private TextBox textBoxName;
         private Button buttonCategories;
         private Button buttonAuthors;
         private Button buttonPublisher;
         private Button buttonInsert;
         private Button buttonUpdate;
         private Button buttonDelete;
-        private ComboBox comboBoxAuthor;
-        private ComboBox comboBoxPublisher;
+        private ComboBox comboBoxAuthors;
+        private ComboBox comboBoxPublishers;
         private ComboBox comboBoxCategories;
         private EventHandler buttonInsert_Click;
         private EventHandler comboBoxAuthor_SelectedIndexChanged;

@@ -1,4 +1,5 @@
 using Book.Bussiness.Concrete;
+using Book.Entities.Concrete;
 
 namespace Book.WinFormUI
 {
@@ -17,19 +18,30 @@ namespace Book.WinFormUI
             comboBoxCategories.DisplayMember = "Name";
             comboBoxCategories.ValueMember ="CategoryID";
 
-            comboBoxAuthor.DataSource = _authorManager.GetAll();
-            comboBoxAuthor.DisplayMember = "Name";
-            comboBoxAuthor.ValueMember = "AuthorID";
+            comboBoxAuthors.DataSource = _authorManager.GetAll();
+            comboBoxAuthors.DisplayMember = "Name";
+            comboBoxAuthors.ValueMember = "AuthorID";
 
-            comboBoxPublisher.DataSource = _publisherManager.GetAll();
-            comboBoxPublisher.DisplayMember = "Name";
-            comboBoxPublisher.ValueMember = "PublisherID";
+            comboBoxPublishers.DataSource = _publisherManager.GetAll();
+            comboBoxPublishers.DisplayMember = "Name";
+            comboBoxPublishers.ValueMember = "PublisherID";
 
-            dataGridView1.DataSource = _myBookManager.GetAll();
+            
         }
 
         private void buttonInsert_Click_1(object sender, EventArgs e)
         {
+            MyBook _myBook = new MyBook();
+            //_myBook.Name = textBoxName.Text;
+            //_myBook.ISBN = textBoxISBN.Text;
+            //_myBook.author = comboBoxAuthors.Text;
+            //_myBook.category = comboBoxCategories.Text;
+            //_myBook.publisher = comboBoxPublishers.Text;
+            //_myBookManager.Add(_myBook);
+            //dataGridView1.DataSource= _myBookManager.GetAll();
+            //_myBook.Name = "";
+            //_myBook.ISBN = "";
+
 
         }
 
@@ -42,7 +54,8 @@ namespace Book.WinFormUI
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            dataGridView1.DataSource = _myBookManager.GetAll();
+ 
         }
 
         private void buttonAuthors_Click(object sender, EventArgs e)
@@ -58,6 +71,11 @@ namespace Book.WinFormUI
         }
 
         private void comboBoxPublisher_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
 
         }

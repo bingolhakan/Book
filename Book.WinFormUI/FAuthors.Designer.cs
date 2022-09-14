@@ -142,6 +142,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "FAuthors";
             this.Text = "FAuthors";
+            this.Load += new System.EventHandler(this.FAuthors_Load);
             this.groupBoxAut.ResumeLayout(false);
             this.groupBoxAut.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAut)).EndInit();

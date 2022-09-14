@@ -18,7 +18,7 @@ namespace Book.WinFormUI
         public FAuthors()
         {
             InitializeComponent();
-            dataGridViewAut.DataSource = _authorManager.GetAll();
+            
         }
 
         private void buttonAutInsert_Click(object sender, EventArgs e)
@@ -29,6 +29,7 @@ namespace Book.WinFormUI
                 author.Name = textBoxAutName.Text;
                 _authorManager.Add(author);
                 dataGridViewAut.DataSource=_authorManager.GetAll();
+                textBoxAutName.Text = "";
             }
             else
             {
@@ -39,6 +40,14 @@ namespace Book.WinFormUI
         private void groupBoxAut_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void FAuthors_Load(object sender, EventArgs e)
+        {
+            dataGridViewAut.DataSource = _authorManager.GetAll();
+            //Sütunları gizlemek için aşağıdaki kodlar kullanılabilir.
+            //dataGridViewAut.Columns[2].Visible = false;
+            //dataGridViewAut.Columns[3].Visible = false;
         }
     }
 }

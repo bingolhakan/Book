@@ -44,10 +44,9 @@
             // buttonCatDelete
             // 
             this.buttonCatDelete.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonCatDelete.Location = new System.Drawing.Point(188, 285);
-            this.buttonCatDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCatDelete.Location = new System.Drawing.Point(215, 380);
             this.buttonCatDelete.Name = "buttonCatDelete";
-            this.buttonCatDelete.Size = new System.Drawing.Size(82, 31);
+            this.buttonCatDelete.Size = new System.Drawing.Size(94, 41);
             this.buttonCatDelete.TabIndex = 12;
             this.buttonCatDelete.Text = "Delete";
             this.buttonCatDelete.UseVisualStyleBackColor = true;
@@ -55,10 +54,9 @@
             // buttonCatUpdate
             // 
             this.buttonCatUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonCatUpdate.Location = new System.Drawing.Point(101, 285);
-            this.buttonCatUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCatUpdate.Location = new System.Drawing.Point(115, 380);
             this.buttonCatUpdate.Name = "buttonCatUpdate";
-            this.buttonCatUpdate.Size = new System.Drawing.Size(82, 31);
+            this.buttonCatUpdate.Size = new System.Drawing.Size(94, 41);
             this.buttonCatUpdate.TabIndex = 11;
             this.buttonCatUpdate.Text = "Update";
             this.buttonCatUpdate.UseVisualStyleBackColor = true;
@@ -66,10 +64,9 @@
             // buttonCatInsert
             // 
             this.buttonCatInsert.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.buttonCatInsert.Location = new System.Drawing.Point(13, 285);
-            this.buttonCatInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonCatInsert.Location = new System.Drawing.Point(15, 380);
             this.buttonCatInsert.Name = "buttonCatInsert";
-            this.buttonCatInsert.Size = new System.Drawing.Size(82, 31);
+            this.buttonCatInsert.Size = new System.Drawing.Size(94, 41);
             this.buttonCatInsert.TabIndex = 10;
             this.buttonCatInsert.Text = "Insert";
             this.buttonCatInsert.UseVisualStyleBackColor = true;
@@ -82,73 +79,69 @@
             this.groupBoxCat.Controls.Add(this.textBoxCatName);
             this.groupBoxCat.Controls.Add(this.labelCatID);
             this.groupBoxCat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.groupBoxCat.Location = new System.Drawing.Point(13, 22);
-            this.groupBoxCat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBoxCat.Location = new System.Drawing.Point(15, 29);
             this.groupBoxCat.Name = "groupBoxCat";
-            this.groupBoxCat.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBoxCat.Size = new System.Drawing.Size(676, 68);
+            this.groupBoxCat.Size = new System.Drawing.Size(773, 91);
             this.groupBoxCat.TabIndex = 9;
             this.groupBoxCat.TabStop = false;
             this.groupBoxCat.Text = "Categories";
             // 
             // textBoxCatID
             // 
-            this.textBoxCatID.Location = new System.Drawing.Point(97, 27);
-            this.textBoxCatID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCatID.Location = new System.Drawing.Point(111, 36);
             this.textBoxCatID.Name = "textBoxCatID";
-            this.textBoxCatID.Size = new System.Drawing.Size(73, 29);
+            this.textBoxCatID.Size = new System.Drawing.Size(83, 34);
             this.textBoxCatID.TabIndex = 5;
             // 
             // labelCatName
             // 
             this.labelCatName.AutoSize = true;
-            this.labelCatName.Location = new System.Drawing.Point(215, 29);
+            this.labelCatName.Location = new System.Drawing.Point(246, 39);
             this.labelCatName.Name = "labelCatName";
-            this.labelCatName.Size = new System.Drawing.Size(52, 21);
+            this.labelCatName.Size = new System.Drawing.Size(64, 28);
             this.labelCatName.TabIndex = 4;
             this.labelCatName.Text = "Name";
             // 
             // textBoxCatName
             // 
-            this.textBoxCatName.Location = new System.Drawing.Point(301, 25);
-            this.textBoxCatName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCatName.Location = new System.Drawing.Point(344, 33);
             this.textBoxCatName.Name = "textBoxCatName";
-            this.textBoxCatName.Size = new System.Drawing.Size(323, 29);
+            this.textBoxCatName.Size = new System.Drawing.Size(369, 34);
             this.textBoxCatName.TabIndex = 3;
             // 
             // labelCatID
             // 
             this.labelCatID.AutoSize = true;
-            this.labelCatID.Location = new System.Drawing.Point(27, 29);
+            this.labelCatID.Location = new System.Drawing.Point(31, 39);
             this.labelCatID.Name = "labelCatID";
-            this.labelCatID.Size = new System.Drawing.Size(25, 21);
+            this.labelCatID.Size = new System.Drawing.Size(31, 28);
             this.labelCatID.TabIndex = 1;
             this.labelCatID.Text = "ID";
             // 
             // dataGridViewCat
             // 
             this.dataGridViewCat.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewCat.Location = new System.Drawing.Point(10, 94);
-            this.dataGridViewCat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewCat.Location = new System.Drawing.Point(11, 125);
             this.dataGridViewCat.Name = "dataGridViewCat";
             this.dataGridViewCat.RowHeadersWidth = 51;
             this.dataGridViewCat.RowTemplate.Height = 29;
-            this.dataGridViewCat.Size = new System.Drawing.Size(679, 181);
+            this.dataGridViewCat.Size = new System.Drawing.Size(776, 241);
             this.dataGridViewCat.TabIndex = 8;
+            this.dataGridViewCat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCat_CellContentClick);
             // 
             // FCategories
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 338);
+            this.ClientSize = new System.Drawing.Size(800, 451);
             this.Controls.Add(this.buttonCatDelete);
             this.Controls.Add(this.buttonCatUpdate);
             this.Controls.Add(this.buttonCatInsert);
             this.Controls.Add(this.groupBoxCat);
             this.Controls.Add(this.dataGridViewCat);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FCategories";
             this.Text = "Categories";
+            this.Load += new System.EventHandler(this.FCategories_Load);
             this.groupBoxCat.ResumeLayout(false);
             this.groupBoxCat.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCat)).EndInit();
