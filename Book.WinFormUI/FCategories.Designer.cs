@@ -60,6 +60,7 @@
             this.buttonCatUpdate.TabIndex = 11;
             this.buttonCatUpdate.Text = "Update";
             this.buttonCatUpdate.UseVisualStyleBackColor = true;
+            this.buttonCatUpdate.Click += new System.EventHandler(this.buttonCatUpdate_Click);
             // 
             // buttonCatInsert
             // 
@@ -108,6 +109,7 @@
             this.textBoxCatName.Name = "textBoxCatName";
             this.textBoxCatName.Size = new System.Drawing.Size(369, 34);
             this.textBoxCatName.TabIndex = 3;
+            this.textBoxCatName.TextChanged += new System.EventHandler(this.textBoxCatName_TextChanged);
             // 
             // labelCatID
             // 
@@ -127,6 +129,7 @@
             this.dataGridViewCat.RowTemplate.Height = 29;
             this.dataGridViewCat.Size = new System.Drawing.Size(776, 241);
             this.dataGridViewCat.TabIndex = 8;
+            this.dataGridViewCat.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCat_CellClick);
             this.dataGridViewCat.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewCat_CellContentClick);
             // 
             // FCategories
