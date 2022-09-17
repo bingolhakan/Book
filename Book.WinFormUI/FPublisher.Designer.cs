@@ -47,6 +47,7 @@
             this.textBoxPubName.Name = "textBoxPubName";
             this.textBoxPubName.Size = new System.Drawing.Size(369, 34);
             this.textBoxPubName.TabIndex = 3;
+            this.textBoxPubName.TextChanged += new System.EventHandler(this.textBoxPubName_TextChanged);
             // 
             // buttonPubDelete
             // 
@@ -57,6 +58,7 @@
             this.buttonPubDelete.TabIndex = 17;
             this.buttonPubDelete.Text = "Delete";
             this.buttonPubDelete.UseVisualStyleBackColor = true;
+            this.buttonPubDelete.Click += new System.EventHandler(this.buttonPubDelete_Click);
             // 
             // buttonPubUpdate
             // 
@@ -67,6 +69,7 @@
             this.buttonPubUpdate.TabIndex = 16;
             this.buttonPubUpdate.Text = "Update";
             this.buttonPubUpdate.UseVisualStyleBackColor = true;
+            this.buttonPubUpdate.Click += new System.EventHandler(this.buttonPubUpdate_Click);
             // 
             // buttonPubInsert
             // 
@@ -92,6 +95,7 @@
             this.groupBoxPub.TabIndex = 14;
             this.groupBoxPub.TabStop = false;
             this.groupBoxPub.Text = "Publishers";
+            this.groupBoxPub.Enter += new System.EventHandler(this.groupBoxPub_Enter);
             // 
             // textBoxPubID
             // 
@@ -127,6 +131,7 @@
             this.dataGridViewPub.RowTemplate.Height = 29;
             this.dataGridViewPub.Size = new System.Drawing.Size(776, 241);
             this.dataGridViewPub.TabIndex = 13;
+            this.dataGridViewPub.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPub_CellClick);
             // 
             // FPublisher
             // 

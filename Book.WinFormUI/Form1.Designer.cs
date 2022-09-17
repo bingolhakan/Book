@@ -84,7 +84,7 @@
             // comboBoxPublishers
             // 
             this.comboBoxPublishers.FormattingEnabled = true;
-            this.comboBoxPublishers.Location = new System.Drawing.Point(475, 119);
+            this.comboBoxPublishers.Location = new System.Drawing.Point(475, 113);
             this.comboBoxPublishers.Name = "comboBoxPublishers";
             this.comboBoxPublishers.Size = new System.Drawing.Size(255, 36);
             this.comboBoxPublishers.TabIndex = 11;
@@ -93,23 +93,26 @@
             // comboBoxCategories
             // 
             this.comboBoxCategories.FormattingEnabled = true;
-            this.comboBoxCategories.Location = new System.Drawing.Point(475, 76);
+            this.comboBoxCategories.Location = new System.Drawing.Point(475, 31);
             this.comboBoxCategories.Name = "comboBoxCategories";
             this.comboBoxCategories.Size = new System.Drawing.Size(255, 36);
             this.comboBoxCategories.TabIndex = 10;
+            this.comboBoxCategories.SelectedIndexChanged += new System.EventHandler(this.comboBoxAuthors_SelectedIndexChanged);
+            this.comboBoxCategories.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBoxCategories_MouseClick);
             // 
             // comboBoxAuthors
             // 
             this.comboBoxAuthors.FormattingEnabled = true;
-            this.comboBoxAuthors.Location = new System.Drawing.Point(475, 31);
+            this.comboBoxAuthors.Location = new System.Drawing.Point(475, 71);
             this.comboBoxAuthors.Name = "comboBoxAuthors";
             this.comboBoxAuthors.Size = new System.Drawing.Size(255, 36);
             this.comboBoxAuthors.TabIndex = 9;
+            this.comboBoxAuthors.SelectedIndexChanged += new System.EventHandler(this.comboBoxAuthors_SelectedIndexChanged);
             // 
             // labelPublisher
             // 
             this.labelPublisher.AutoSize = true;
-            this.labelPublisher.Location = new System.Drawing.Point(347, 119);
+            this.labelPublisher.Location = new System.Drawing.Point(347, 113);
             this.labelPublisher.Name = "labelPublisher";
             this.labelPublisher.Size = new System.Drawing.Size(92, 28);
             this.labelPublisher.TabIndex = 8;
@@ -118,7 +121,7 @@
             // labelCategories
             // 
             this.labelCategories.AutoSize = true;
-            this.labelCategories.Location = new System.Drawing.Point(347, 76);
+            this.labelCategories.Location = new System.Drawing.Point(347, 31);
             this.labelCategories.Name = "labelCategories";
             this.labelCategories.Size = new System.Drawing.Size(105, 28);
             this.labelCategories.TabIndex = 5;
@@ -127,11 +130,12 @@
             // labelAuthor
             // 
             this.labelAuthor.AutoSize = true;
-            this.labelAuthor.Location = new System.Drawing.Point(347, 36);
+            this.labelAuthor.Location = new System.Drawing.Point(347, 71);
             this.labelAuthor.Name = "labelAuthor";
             this.labelAuthor.Size = new System.Drawing.Size(73, 28);
             this.labelAuthor.TabIndex = 4;
             this.labelAuthor.Text = "Author";
+            this.labelAuthor.Click += new System.EventHandler(this.labelAuthor_Click);
             // 
             // textBoxISBN
             // 
@@ -143,7 +147,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 76);
+            this.label1.Location = new System.Drawing.Point(31, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 28);
             this.label1.TabIndex = 2;
@@ -152,7 +156,7 @@
             // labelBookName
             // 
             this.labelBookName.AutoSize = true;
-            this.labelBookName.Location = new System.Drawing.Point(31, 39);
+            this.labelBookName.Location = new System.Drawing.Point(31, 33);
             this.labelBookName.Name = "labelBookName";
             this.labelBookName.Size = new System.Drawing.Size(64, 28);
             this.labelBookName.TabIndex = 1;

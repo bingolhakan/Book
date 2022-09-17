@@ -32,15 +32,15 @@ namespace Book.WinFormUI
         private void buttonInsert_Click_1(object sender, EventArgs e)
         {
             MyBook _myBook = new MyBook();
-            //_myBook.Name = textBoxName.Text;
-            //_myBook.ISBN = textBoxISBN.Text;
-            //_myBook.author = comboBoxAuthors.Text;
+            _myBook.Name = textBoxName.Text;
+            _myBook.ISBN = textBoxISBN.Text;
+            //_myBook.author = ComboBoxAuthors.Text;
             //_myBook.category = comboBoxCategories.Text;
             //_myBook.publisher = comboBoxPublishers.Text;
-            //_myBookManager.Add(_myBook);
-            //dataGridView1.DataSource= _myBookManager.GetAll();
-            //_myBook.Name = "";
-            //_myBook.ISBN = "";
+            _myBookManager.Add(_myBook);
+            dataGridView1.DataSource = _myBookManager.GetAll();
+            _myBook.Name = "";
+            _myBook.ISBN = "";
 
 
         }
@@ -76,6 +76,21 @@ namespace Book.WinFormUI
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxCategories_MouseClick(object sender, MouseEventArgs e)
+        {
+            comboBoxCategories.DataSource = _categoryManager.GetAll();
+        }
+
+        private void labelAuthor_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxAuthors_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

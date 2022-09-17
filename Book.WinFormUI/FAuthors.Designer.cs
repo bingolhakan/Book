@@ -50,6 +50,7 @@
             this.buttonAutDelete.TabIndex = 17;
             this.buttonAutDelete.Text = "Delete";
             this.buttonAutDelete.UseVisualStyleBackColor = true;
+            this.buttonAutDelete.Click += new System.EventHandler(this.buttonAutDelete_Click);
             // 
             // buttonAutUpdate
             // 
@@ -60,6 +61,7 @@
             this.buttonAutUpdate.TabIndex = 16;
             this.buttonAutUpdate.Text = "Update";
             this.buttonAutUpdate.UseVisualStyleBackColor = true;
+            this.buttonAutUpdate.Click += new System.EventHandler(this.buttonAutUpdate_Click);
             // 
             // buttonAutInsert
             // 
@@ -109,6 +111,7 @@
             this.textBoxAutName.Name = "textBoxAutName";
             this.textBoxAutName.Size = new System.Drawing.Size(369, 34);
             this.textBoxAutName.TabIndex = 3;
+            this.textBoxAutName.TextChanged += new System.EventHandler(this.textBoxAutName_TextChanged);
             // 
             // labelAutID
             // 
@@ -128,6 +131,8 @@
             this.dataGridViewAut.RowTemplate.Height = 29;
             this.dataGridViewAut.Size = new System.Drawing.Size(776, 241);
             this.dataGridViewAut.TabIndex = 13;
+            this.dataGridViewAut.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAut_CellClick);
+            this.dataGridViewAut.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAut_CellContentClick);
             // 
             // FAuthors
             // 

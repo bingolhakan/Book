@@ -55,6 +55,16 @@ namespace Book.WinFormUI
 
         private void buttonCatUpdate_Click(object sender, EventArgs e)
         {
+            
+            Category _category = _categoryManager.GetById(Int32.Parse(textBoxCatID.Text));
+            _category.Name = textBoxCatName.Text;
+            _categoryManager.Update(_category);
+            MessageBox.Show("Güncelleme İşlemi Başarı ile Tamamlandı", "Bilgi", MessageBoxButtons.OK);
+            textBoxCatID.Clear();
+            textBoxCatName.Clear();
+            buttonCatUpdate.Enabled=false;
+            buttonCatDelete.Enabled = false;
+            dataGridViewCat.DataSource = _categoryManager.GetAll();
 
         }
 
@@ -75,6 +85,24 @@ namespace Book.WinFormUI
             buttonCatDelete.Enabled = true;
 
             //}
+        }
+
+        private void FCategories_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
+
+        private void buttonCatDelete_Click(object sender, EventArgs e)
+        {
+            Category _category = _categoryManager.GetById(Int32.Parse(textBoxCatID.Text));
+            _category.IsDelete = true;
+            _categoryManager.Update(_category);
+            dataGridViewCat.DataSource = _categoryManager.GetAll();
+            MessageBox.Show("Silme işlemi başarı ile tamamlandı", "Bilgi", MessageBoxButtons.OK);
+            textBoxCatID.Clear();
+            textBoxCatName.Clear();
+            buttonCatUpdate.Enabled = false;
+            buttonCatDelete.Enabled = false;
         }
     }
 }

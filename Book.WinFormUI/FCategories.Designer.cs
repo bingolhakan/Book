@@ -50,6 +50,7 @@
             this.buttonCatDelete.TabIndex = 12;
             this.buttonCatDelete.Text = "Delete";
             this.buttonCatDelete.UseVisualStyleBackColor = true;
+            this.buttonCatDelete.Click += new System.EventHandler(this.buttonCatDelete_Click);
             // 
             // buttonCatUpdate
             // 
@@ -144,6 +145,7 @@
             this.Controls.Add(this.dataGridViewCat);
             this.Name = "FCategories";
             this.Text = "Categories";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FCategories_FormClosed);
             this.Load += new System.EventHandler(this.FCategories_Load);
             this.groupBoxCat.ResumeLayout(false);
             this.groupBoxCat.PerformLayout();
