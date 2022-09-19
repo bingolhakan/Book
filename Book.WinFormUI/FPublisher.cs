@@ -92,5 +92,10 @@ namespace Book.WinFormUI
         {
 
         }
+
+        private void dataGridViewPub_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

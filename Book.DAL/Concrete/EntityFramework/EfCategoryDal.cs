@@ -20,7 +20,8 @@ namespace Book.DAL.Concrete.EntityFramework
 
         public void Delete(Category category)
         {
-            _context.Categories.Remove(category);
+            category.IsDelete = true;
+            Update(category);
             _context.SaveChanges();
         }
 
@@ -36,12 +37,8 @@ namespace Book.DAL.Concrete.EntityFramework
 
         public void Update(Category category)
         {
-            var result = _context.Categories.Find(category.CategoryID);
-            if (result!=null)
-            {
-                result.Name = category.Name;
-                _context.SaveChanges();
-            }
+            Update(category);
+            _context.SaveChanges();
         }
     }
 }

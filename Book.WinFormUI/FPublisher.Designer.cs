@@ -132,6 +132,7 @@
             this.dataGridViewPub.Size = new System.Drawing.Size(776, 241);
             this.dataGridViewPub.TabIndex = 13;
             this.dataGridViewPub.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPub_CellClick);
+            this.dataGridViewPub.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewPub_CellContentClick);
             // 
             // FPublisher
             // 

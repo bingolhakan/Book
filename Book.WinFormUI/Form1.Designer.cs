@@ -59,6 +59,8 @@
             this.dataGridView1.RowTemplate.Height = 29;
             this.dataGridView1.Size = new System.Drawing.Size(776, 163);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // groupBox1
             // 
@@ -89,6 +91,7 @@
             this.comboBoxPublishers.Size = new System.Drawing.Size(255, 36);
             this.comboBoxPublishers.TabIndex = 11;
             this.comboBoxPublishers.SelectedIndexChanged += new System.EventHandler(this.comboBoxPublisher_SelectedIndexChanged);
+            this.comboBoxPublishers.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBoxPublishers_MouseClick);
             // 
             // comboBoxCategories
             // 
@@ -108,6 +111,7 @@
             this.comboBoxAuthors.Size = new System.Drawing.Size(255, 36);
             this.comboBoxAuthors.TabIndex = 9;
             this.comboBoxAuthors.SelectedIndexChanged += new System.EventHandler(this.comboBoxAuthors_SelectedIndexChanged);
+            this.comboBoxAuthors.MouseClick += new System.Windows.Forms.MouseEventHandler(this.comboBoxAuthors_MouseClick);
             // 
             // labelPublisher
             // 
@@ -222,6 +226,7 @@
             this.buttonUpdate.TabIndex = 6;
             this.buttonUpdate.Text = "Update";
             this.buttonUpdate.UseVisualStyleBackColor = true;
+            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
             // 
             // buttonDelete
             // 

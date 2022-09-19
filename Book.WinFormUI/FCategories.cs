@@ -18,10 +18,7 @@ namespace Book.WinFormUI
         public FCategories()
         {
             InitializeComponent();
-            dataGridViewCat.DataSource = _categoryManager.GetAll();
-            dataGridViewCat.Columns[2].Visible = false;
-            dataGridViewCat.Columns[3].Visible = false;
-            textBoxCatID.Enabled = false;
+
         }
 
         private void buttonCatInsert_Click(object sender, EventArgs e)
@@ -32,12 +29,24 @@ namespace Book.WinFormUI
                 category.Name = textBoxCatName.Text;
                 _categoryManager.Add(category);
                 dataGridViewCat.DataSource = _categoryManager.GetAll();
+                MessageBox.Show("Kayıt işlemi başarı ile tamamlandı", "Bilgi", MessageBoxButtons.OK);
+                buttonCatUpdate.Enabled = false;
+                buttonCatDelete.Enabled = false;
+                textBoxCatID.Clear();
+                textBoxCatName.Clear();
             }
-            
+            else
+            {
+                MessageBox.Show("Name alanı boş, lütfen doldurup tekrar deneyiniz","Hata",MessageBoxButtons.OK);
+            }
         }
 
         private void FCategories_Load(object sender, EventArgs e)
         {
+            dataGridViewCat.DataSource = _categoryManager.GetAll();
+            dataGridViewCat.Columns[2].Visible = false;
+            dataGridViewCat.Columns[3].Visible = false;
+            textBoxCatID.Enabled = false;
             //Visible: Görünür mü? Enabled:Etkinleştirilmiş mi?
             buttonCatUpdate.Enabled = false;
             buttonCatDelete.Enabled = false;
@@ -50,7 +59,7 @@ namespace Book.WinFormUI
 
         private void textBoxCatName_TextChanged(object sender, EventArgs e)
         {
-
+            buttonCatDelete.Enabled=false;
         }
 
         private void buttonCatUpdate_Click(object sender, EventArgs e)
@@ -73,14 +82,6 @@ namespace Book.WinFormUI
             textBoxCatID.Text = dataGridViewCat.Rows[e.RowIndex].Cells[0].Value.ToString();
             textBoxCatName.Text = dataGridViewCat.Rows[e.RowIndex].Cells[1].Value.ToString();
 
-            //if (e.RowIndex >= 0)
-            //{
-            //    DataGridViewRow row = dataGridViewCat.Rows[e.RowIndex];
-            //    int _id = Int32.Parse(row.Cells[0].Value.ToString());
-            //    Category category = _categoryManager.GetById(_id);
-            //    textBoxCatID.Text = Convert.ToString(category.CategoryID);
-            //    textBoxCatName.Text = category.Name;
-
             buttonCatUpdate.Enabled = true;
             buttonCatDelete.Enabled = true;
 
@@ -95,8 +96,8 @@ namespace Book.WinFormUI
         private void buttonCatDelete_Click(object sender, EventArgs e)
         {
             Category _category = _categoryManager.GetById(Int32.Parse(textBoxCatID.Text));
-            _category.IsDelete = true;
-            _categoryManager.Update(_category);
+           
+            _categoryManager.Delete(_category);
             dataGridViewCat.DataSource = _categoryManager.GetAll();
             MessageBox.Show("Silme işlemi başarı ile tamamlandı", "Bilgi", MessageBoxButtons.OK);
             textBoxCatID.Clear();
